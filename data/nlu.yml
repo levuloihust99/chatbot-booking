@@ -1,0 +1,71 @@
+version: "2.0"
+
+nlu:
+- intent: chao_hoi
+  examples: |
+    - chào bạn
+    - hello
+    - hi
+    - yo
+    - hello bạn
+    - bạn gì ơi
+    - bạn hỡi
+    - rất vui được gặp bạn
+    - chào bot nhé
+    - xin chào
+    - xin chào người anh em
+    - chào bạn tôi
+    - hú
+
+- intent: tam_biet
+  examples: |
+    - bai
+    - bái bai
+    - tạm biệt nhé
+    - tạm biệt
+    - good bye
+    - bye
+    - goodbye
+    - hẹn gặp sau nhé
+    - bye bye
+    - bai bai
+
+- intent: dong_y
+  examples: |
+    - yes
+    - y
+    - ok
+    - oke
+    - oke bạn
+    - ừ
+    - được nhé
+    - yeah
+    - đồng ý
+
+- intent: tu_choi
+  examples: |
+    - no
+    - n
+    - never
+    - không
+    - không được
+    - không bao giờ
+    - hủy
+    - hủy nhé
+    - từ chối
+    - nâu
+
+- intent: dang_ky
+  examples: |
+    - Tôi muốn đăng ký tài khoản
+    - đăng ký
+    - đăng ký tài khoản
+    - tôi muốn đăng ký
+
+- regex: phone_number
+  examples: |
+    - \b(?:\+\d{1,2}\s?|0)\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?(?:\d{2,4})\b
+  
+- regex: email
+  examples: |
+    - \b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b

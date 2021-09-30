@@ -1,0 +1,43 @@
+version: "2.0"
+
+intents:
+  - chao_hoi
+  - tam_biet
+  - dong_y
+  - tu_choi
+  - dang_ky
+
+entities:
+  - phone_number
+  - email
+
+slots:
+  phone_number_slot:
+    type: text
+  email_slot:
+    type: text
+  
+responses:
+  utter_chao_hoi:
+  - text: "Xin chào, rất vui được gặp bạn."
+  utter_tam_biet:
+  - text: "Hẹn gặp lại bạn nhé !"
+  utter_ask_info_form_phone_number_slot:
+  - text: "Bạn vui lòng cung cấp số điện thoại nhé"
+  utter_ask_info_form_email_slot:
+  - text: "Bạn vui lòng cung cấp email nhé"
+  utter_hoan_thanh_dang_ky:
+  - text: "Thông tin đăng ký của bạn đã được ghi nhận"
+
+forms:
+  info_form:
+    phone_number_slot:
+      - type: from_entity
+        entity: phone_number
+    email_slot:
+      - type: from_entity
+        entity: email
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

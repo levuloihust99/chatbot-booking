@@ -1,0 +1,27 @@
+version: "2.0"
+
+rules:
+
+- rule: Chào tạm biệt
+  steps:
+  - intent: tam_biet
+  - action: utter_tam_biet
+
+- rule: Chào hỏi
+  steps:
+  - intent: chao_hoi
+  - action: utter_chao_hoi
+
+- rule: Đăng ký
+  steps:
+  - intent: dang_ky
+  - action: info_form
+  - active_loop: info_form
+
+- rule: Hoàn tất form đăng ký
+  steps:
+  - action: info_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_hoan_thanh_dang_ky
